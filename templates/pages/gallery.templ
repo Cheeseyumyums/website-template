@@ -1,0 +1,78 @@
+package pages
+
+import (
+	"website-template/internal/meta"
+	"website-template/templates/layouts"
+)
+
+templ Gallery() {
+	@layouts.Base(meta.New("Our Work", "See the results of our professional commercial kitchen hood cleaning services")) {
+		<div class="max-w-6xl mx-auto px-5 py-10">
+			<h1 class="text-4xl mb-3 text-center font-bold">Our Work</h1>
+			<p class="text-lg mb-12 text-center text-neutral-300">See the difference professional hood cleaning makes</p>
+			<div class="grid md:grid-cols-2 gap-8 mb-12">
+				<div class="bg-neutral-900 p-6 rounded-2xl shadow-[0_4px_8px_rgba(255,255,255,0.1)]">
+					<h2 class="text-2xl mb-4 text-center font-semibold text-red-400">Before Cleaning</h2>
+					<div class="relative overflow-hidden rounded-xl mb-4">
+						<img
+							src="/static/images/before.webp"
+							alt="Commercial kitchen hood before cleaning - heavily caked with grease and grime"
+							class="w-full h-auto object-cover"
+							loading="lazy"
+						/>
+					</div>
+					<p class="text-neutral-300 text-center">Heavy grease buildup poses fire hazards and health code violations</p>
+				</div>
+				<div class="bg-neutral-900 p-6 rounded-2xl shadow-[0_4px_8px_rgba(255,255,255,0.1)]">
+					<h2 class="text-2xl mb-4 text-center font-semibold text-green-400">After Cleaning</h2>
+					<div class="relative overflow-hidden rounded-xl mb-4">
+						<img
+							src="/static/images/after.webp"
+							alt="Commercial kitchen hood after cleaning - clean, shiny stainless steel"
+							class="w-full h-auto object-cover"
+							loading="lazy"
+						/>
+					</div>
+					<p class="text-neutral-300 text-center">Spotless, compliant, and safe - ready for inspection</p>
+				</div>
+			</div>
+			<div class="bg-blue-600/20 border-2 border-blue-600 p-8 rounded-2xl text-center mb-8">
+				<h3 class="text-2xl mb-4 font-semibold">Why Professional Hood Cleaning Matters</h3>
+				<div class="grid md:grid-cols-3 gap-6 text-left">
+					<div>
+						<div class="text-3xl mb-2">🔥</div>
+						<h4 class="font-semibold mb-2">Fire Prevention</h4>
+						<p class="text-sm text-neutral-300">Grease buildup is the leading cause of restaurant fires. Regular cleaning eliminates this risk.</p>
+					</div>
+					<div>
+						<div class="text-3xl mb-2">✅</div>
+						<h4 class="font-semibold mb-2">Code Compliance</h4>
+						<p class="text-sm text-neutral-300">Meet local health and safety regulations. Avoid fines and potential shutdowns.</p>
+					</div>
+					<div>
+						<div class="text-3xl mb-2">💰</div>
+						<h4 class="font-semibold mb-2">Equipment Longevity</h4>
+						<p class="text-sm text-neutral-300">Clean systems run more efficiently and last longer, saving you money on repairs.</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				<h3 class="text-2xl mb-4">Ready to get your kitchen hood cleaned?</h3>
+				<div class="flex flex-col md:flex-row justify-center gap-4">
+					<a
+						href="tel:7152144518"
+						class="bg-blue-600 text-white px-8 py-4 text-lg rounded-full cursor-pointer transition-all duration-300 shadow-[0_4px_6px_rgba(0,102,255,0.3)] hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_6px_12px_rgba(0,102,255,0.4)] inline-block"
+					>
+						📞 Call 715-214-4518
+					</a>
+					<a
+						href="mailto:jeffrogerspwt@yahoo.com"
+						class="bg-neutral-700 text-white px-8 py-4 text-lg rounded-full cursor-pointer transition-all duration-300 shadow-[0_4px_6px_rgba(0,0,0,0.3)] hover:bg-neutral-600 hover:-translate-y-0.5 hover:shadow-[0_6px_12px_rgba(0,0,0,0.4)] inline-block"
+					>
+						✉️ Email Us
+					</a>
+				</div>
+			</div>
+		</div>
+	}
+}

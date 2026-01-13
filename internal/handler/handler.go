@@ -21,4 +21,5 @@ func (h *Handler) RegisterRoutes(e *echo.Echo) {
 
 	e.GET("/health", h.Health)
 	e.GET("/", h.Home)
+	e.GET("/gallery", h.Gallery)
 }

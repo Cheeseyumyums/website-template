@@ -13,6 +13,15 @@ templ Base(m meta.PageMeta) {
 			<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 		</head>
 		<body class="bg-gradient-to-b from-black via-neutral-900 to-neutral-800 min-h-screen text-white">
+			<header class="bg-black/50 border-b border-neutral-700 sticky top-0 z-50 backdrop-blur-sm">
+				<nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+					<a href="/" class="text-xl font-bold hover:text-blue-400 transition-colors">PWT</a>
+					<div class="flex gap-6">
+						<a href="/" class="hover:text-blue-400 transition-colors">Home</a>
+						<a href="/gallery" class="hover:text-blue-400 transition-colors">Our Work</a>
+					</div>
+				</nav>
+			</header>
 			<main>
 				{ children... }
 			</main>
