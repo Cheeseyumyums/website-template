@@ -1,0 +1,21 @@
+package layouts
+
+import "website-template/internal/meta"
+
+templ Base(m meta.PageMeta) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			@MetaTags(m)
+			<link rel="stylesheet" href="/static/css/output.css"/>
+			<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+		</head>
+		<body class="bg-gradient-to-b from-black via-neutral-900 to-neutral-800 min-h-screen text-white">
+			<main>
+				{ children... }
+			</main>
+		</body>
+	</html>
+}

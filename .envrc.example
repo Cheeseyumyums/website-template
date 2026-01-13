@@ -1,0 +1,12 @@
+# Copy this file to .envrc and edit with your values
+# Then run: direnv allow
+
+# Server
+export PORT="3000"
+export ENV="development"
+export LOG_LEVEL="DEBUG"
+
+# Site / SEO (used for meta tags, OG, etc.)
+export SITE_NAME="PWT - Power Wash Technologies"
+export SITE_URL="http://localhost:3000"
+export DEFAULT_OG_IMAGE="/static/images/og-default.png"

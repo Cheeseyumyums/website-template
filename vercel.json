@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/static/(.*)",
+      "destination": "/public/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.go"
+    }
+  ]
+}
