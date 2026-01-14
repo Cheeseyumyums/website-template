@@ -2,7 +2,6 @@ package handler
 
 import (
 	"net/http"
-	"os"
 
 	"website-template/internal/config"
 	"website-template/internal/handler"
