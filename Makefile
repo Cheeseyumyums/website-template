@@ -22,13 +22,19 @@ lint:
 	templ fmt templates/
 
 generate:
-	go generate ./...
+	@echo "Generating templ files..."
+	@templ generate
+	@echo "templ files generated"
+	@echo "Generating Tailwind CSS..."
+	@npx @tailwindcss/cli -i static/css/input.css -o public/css/output.css
+	@echo "Tailwind CSS generated"
 
 css:
 	npx @tailwindcss/cli -i static/css/input.css -o static/css/output.css --minify
+	cp static/css/output.css public/css/output.css
 
 css-watch:
-	npx @tailwindcss/cli -i static/css/input.css -o static/css/output.css --watch
+	npx @tailwindcss/cli -i static/css/input.css -o static/css/output.css --watch --exec "cp static/css/output.css public/css/output.css"
 
 setup:
 	go install github.com/air-verse/air@latest

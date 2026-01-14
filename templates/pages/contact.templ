@@ -1,0 +1,335 @@
+package pages
+
+import (
+	"website-template/internal/meta"
+	"website-template/templates/layouts"
+	"website-template/components/accordion"
+)
+
+templ Contact() {
+	@layouts.Base(meta.New("Get Free Quote | Commercial Hood Cleaning | PWT", "Call 715-214-4518 for free quote. Same-week service available. Fully insured and NFPA 96 certified hood cleaning.")) {
+		<!-- Hero Section -->
+		<section class="relative overflow-hidden py-20 md:py-32">
+			<div class="absolute inset-0 opacity-10">
+				<div class="absolute top-20 left-10 w-96 h-96 bg-[#00d4ff] rounded-full blur-3xl"></div>
+				<div class="absolute bottom-20 right-20 w-96 h-96 bg-[#ff7b59] rounded-full blur-3xl"></div>
+			</div>
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+				<h1 class="gradient-text animate-gradient mb-6">Get Your Free Quote Today</h1>
+				<p class="text-xl md:text-2xl text-white/80 mb-8">
+					Call, email, or text - we respond within 24 hours
+				</p>
+				<a href="tel:7152144518" class="gradient-text text-5xl md:text-7xl font-black hover:scale-105 transition-smooth inline-block glow-cyan">
+					715-214-4518
+				</a>
+			</div>
+		</section>
+		<!-- Contact Methods -->
+		<section class="py-20 md:py-32">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Call Us -->
+					<a href="tel:7152144518" class="glass-card border border-white/10 rounded-2xl p-8 hover-lift hover-glow transition-smooth group space-y-6">
+						<div class="w-20 h-20 bg-gradient-brand rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+							</svg>
+						</div>
+						<div class="text-center">
+							<h3 class="text-2xl font-bold mb-2">Call Us</h3>
+							<p class="text-white/70 mb-4">Talk to Jeff directly</p>
+							<p class="text-white/50 text-sm mb-4">Monday-Saturday: 7am-6pm</p>
+							<div class="bg-gradient-fire text-white px-6 py-3 rounded-full font-bold inline-block">
+								Click to Call
+							</div>
+						</div>
+					</a>
+					<!-- Email Us -->
+					<a href="mailto:jeffrogerspwt@yahoo.com" class="glass-card border border-white/10 rounded-2xl p-8 hover-lift hover-glow transition-smooth group space-y-6">
+						<div class="w-20 h-20 bg-gradient-success rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+							</svg>
+						</div>
+						<div class="text-center">
+							<h3 class="text-2xl font-bold mb-2">Email Us</h3>
+							<p class="text-white/70 mb-4">Get a quote via email</p>
+							<p class="text-white/50 text-sm mb-4">Response within 24 hours</p>
+							<div class="bg-gradient-success text-white px-6 py-3 rounded-full font-bold inline-block">
+								Send Email
+							</div>
+						</div>
+					</a>
+					<!-- Text Us -->
+					<a href="sms:7152144518" class="glass-card border border-white/10 rounded-2xl p-8 hover-lift hover-glow transition-smooth group space-y-6">
+						<div class="w-20 h-20 bg-gradient-fire rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+							</svg>
+						</div>
+						<div class="text-center">
+							<h3 class="text-2xl font-bold mb-2">Text Us</h3>
+							<p class="text-white/70 mb-4">Quick questions via text</p>
+							<p class="text-white/50 text-sm mb-4">We text back fast</p>
+							<div class="bg-gradient-fire text-white px-6 py-3 rounded-full font-bold inline-block">
+								Send Text
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- Service Area -->
+		<section class="py-20 bg-gradient-to-b from-transparent to-[#0b1929]/50">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="glass-card border border-white/10 rounded-2xl p-8 md:p-12 text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Serving Central Wisconsin</h2>
+					<p class="text-white/70 text-lg mb-6">
+						Providing NFPA 96 certified hood cleaning throughout central Wisconsin and surrounding areas
+					</p>
+					<p class="text-white/60 mb-4">
+						Not sure if we service your area? Give us a call to confirm!
+					</p>
+					<a href="tel:7152144518" class="bg-gradient-brand text-white font-bold px-8 py-4 rounded-full hover-lift shadow-lg inline-block">
+						Call to Confirm Coverage
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- FAQ Section -->
+		<section class="py-20 md:py-32">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-center mb-4 gradient-text">Frequently Asked Questions</h2>
+				<p class="text-center text-white/70 mb-12 text-lg">Everything you need to know about our hood cleaning services</p>
+				@accordion.Accordion(accordion.Props{}) {
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							How much does hood cleaning cost?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>Pricing depends on your system size, ductwork length, and current condition. Most restaurant hood cleanings range from $300-$800.</p>
+								<p>We provide free quotes after a quick phone consultation. Call 715-214-4518 for pricing specific to your kitchen.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							How long does cleaning take?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>Most hood cleaning services take 2-6 hours depending on system size and grease buildup.</p>
+								<p>We work during your off-hours to avoid disrupting operations. Same-week scheduling available.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							How often do I need my hood cleaned?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p class="font-semibold">NFPA 96 mandates cleaning frequency based on your operation:</p>
+								<ul class="space-y-2 ml-4">
+									<li class="flex items-start gap-2">
+										<span class="text-[#ff7b59] font-bold">•</span>
+										<span><strong>Monthly:</strong> 24-hour operations, solid fuel cooking</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#ff9f1c] font-bold">•</span>
+										<span><strong>Quarterly:</strong> High-volume cooking with charbroiling or woks</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#00d4ff] font-bold">•</span>
+										<span><strong>Semi-Annual:</strong> Moderate cooking operations</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#c77dff] font-bold">•</span>
+										<span><strong>Annual:</strong> Low-volume operations</span>
+									</li>
+								</ul>
+								<p>We'll assess your kitchen and recommend the right schedule.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							Do you provide documentation for inspectors?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p class="font-semibold">Yes! Every service includes:</p>
+								<ul class="space-y-2 ml-4">
+									<li class="flex items-start gap-2">
+										<span class="text-[#00d4ff]">✓</span>
+										<span>Before and after photo documentation</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#00d4ff]">✓</span>
+										<span>Service date stickers placed on your hood</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#00d4ff]">✓</span>
+										<span>NFPA 96 compliance certificate</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-[#00d4ff]">✓</span>
+										<span>Digital report emailed within 24 hours</span>
+									</li>
+								</ul>
+								<p>This satisfies fire marshal and insurance requirements.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							Can you clean during business hours?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>We prefer to work during your closed hours to avoid disruption, but we can accommodate your schedule.</p>
+								<p>Most clients choose night or early morning service. We're flexible and work around your needs.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							What if I fail a fire inspection?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>We offer emergency cleaning service to get you compliant quickly.</p>
+								<p>Many clients call us after failed inspections, and we prioritize urgent requests with same-week service.</p>
+								<p>Call 715-214-4518 immediately for emergency service.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							Are you licensed and insured?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>Yes, we are fully insured and NFPA 96 certified.</p>
+								<p>We carry general liability and workers' compensation insurance. Certificates available upon request.</p>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							Who do you serve?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p class="font-semibold">We clean commercial kitchen exhaust systems for:</p>
+								<div class="grid md:grid-cols-2 gap-2 ml-4">
+									<div class="flex items-center gap-2">
+										<span>🍽️</span>
+										<span>Restaurants and bars</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🍔</span>
+										<span>Fast food chains</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🏨</span>
+										<span>Hotels and resorts</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🏫</span>
+										<span>Schools and universities</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🏥</span>
+										<span>Hospitals and healthcare</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🎉</span>
+										<span>Catering facilities</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>🚚</span>
+										<span>Food trucks</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span>👨‍🍳</span>
+										<span>Any commercial kitchen</span>
+									</div>
+								</div>
+							</div>
+						}
+					}
+					@accordion.Item(accordion.ItemProps{}) {
+						@accordion.Trigger(accordion.TriggerProps{}) {
+							Do you clean rooftop fans too?
+						}
+						@accordion.Content(accordion.ContentProps{}) {
+							<div class="space-y-3 text-white/80">
+								<p>Absolutely. Complete system cleaning includes hoods, ducts, plenum, and rooftop exhaust fans.</p>
+								<p>We clean the entire exhaust path to bare metal standard - from your hood all the way to the rooftop equipment.</p>
+							</div>
+						}
+					}
+				}
+			</div>
+		</section>
+		<!-- Emergency Service Callout -->
+		<section class="py-20">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="bg-gradient-fire rounded-2xl p-8 md:p-12 border border-[#ff9f1c]/30 shadow-2xl relative overflow-hidden">
+					<div class="absolute top-4 left-4">
+						<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center animate-pulse-glow">
+							<span class="text-3xl">⚠️</span>
+						</div>
+					</div>
+					<div class="relative z-10 ml-16">
+						<h2 class="text-white text-3xl md:text-4xl font-bold mb-4">Failed Your Fire Inspection?</h2>
+						<p class="text-white/90 text-lg mb-6">
+							Don't panic. We offer emergency hood cleaning to get you compliant and re-inspected quickly.
+						</p>
+						<a
+							href="tel:7152144518"
+							class="inline-flex items-center gap-3 bg-white text-[#ff7b59] font-bold px-8 py-4 rounded-full hover:scale-105 transition-smooth shadow-lg"
+						>
+							<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+							</svg>
+							Call Now for Emergency Service: 715-214-4518
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Bottom CTA -->
+		<section class="py-20 md:py-32 relative overflow-hidden">
+			<div class="absolute inset-0 bg-gradient-to-br from-[#00d4ff]/20 via-[#c77dff]/20 to-[#ff7b59]/20"></div>
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+				<h2 class="mb-6 gradient-text">Ready to Get Started?</h2>
+				<p class="text-white/70 text-xl mb-10">
+					Contact us today for your free quote and same-week service
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="tel:7152144518"
+						class="bg-gradient-fire text-white font-bold px-10 py-5 rounded-full text-lg hover-lift shadow-2xl inline-flex items-center justify-center gap-3"
+					>
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+						</svg>
+						Call 715-214-4518
+					</a>
+					<a
+						href="mailto:jeffrogerspwt@yahoo.com"
+						class="glass-card border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full text-lg hover-lift inline-flex items-center justify-center gap-3"
+					>
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+						</svg>
+						Email Us
+					</a>
+				</div>
+			</div>
+		</section>
+	}
+}

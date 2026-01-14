@@ -1,0 +1,26 @@
+package components
+
+// ServiceCard renders a card for displaying a service feature
+templ ServiceCard(icon string, title string, description string, link string) {
+	<div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<div class="flex flex-col items-center text-center space-y-4">
+			<!-- Icon -->
+			<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-3xl">
+				{ icon }
+			</div>
+			<!-- Title -->
+			<h3 class="text-xl font-semibold text-gray-900">{ title }</h3>
+			<!-- Description -->
+			<p class="text-gray-600 leading-relaxed">{ description }</p>
+			<!-- Optional Link -->
+			if link != "" {
+				<a href={ templ.URL(link) } class="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-flex items-center gap-1">
+					Learn More
+					<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+					</svg>
+				</a>
+			}
+		</div>
+	</div>
+}

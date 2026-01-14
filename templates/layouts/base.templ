@@ -1,6 +1,7 @@
 package layouts
 
 import "website-template/internal/meta"
+import "website-template/templates/components"
 
 templ Base(m meta.PageMeta) {
 	<!DOCTYPE html>
@@ -11,20 +12,83 @@ templ Base(m meta.PageMeta) {
 			@MetaTags(m)
 			<link rel="stylesheet" href="/static/css/output.css"/>
 			<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+			<script src="/static/js/floating-cta.js"></script>
 		</head>
-		<body class="bg-gradient-to-b from-black via-neutral-900 to-neutral-800 min-h-screen text-white">
-			<header class="bg-black/50 border-b border-neutral-700 sticky top-0 z-50 backdrop-blur-sm">
-				<nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
-					<a href="/" class="text-xl font-bold hover:text-blue-400 transition-colors">PWT</a>
-					<div class="flex gap-6">
-						<a href="/" class="hover:text-blue-400 transition-colors">Home</a>
-						<a href="/gallery" class="hover:text-blue-400 transition-colors">Our Work</a>
+		<body class="min-h-screen">
+			<!-- Header with Glassmorphism -->
+			<header class="glass-header sticky top-0 z-50 border-b border-white/10">
+				<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+					<div class="flex justify-between items-center">
+						<!-- Logo -->
+						<a href="/" class="text-2xl md:text-3xl font-bold gradient-text transition-smooth hover:scale-105">
+							PWT
+						</a>
+						<!-- Navigation Links -->
+						<div class="flex gap-6 md:gap-8">
+							<a href="/" class="text-white/80 hover:text-white transition-smooth font-medium text-sm md:text-base">
+								Home
+							</a>
+							<a href="/services" class="text-white/80 hover:text-white transition-smooth font-medium text-sm md:text-base">
+								Services
+							</a>
+							<a href="/gallery" class="text-white/80 hover:text-white transition-smooth font-medium text-sm md:text-base">
+								Gallery
+							</a>
+							<a href="/contact" class="text-white/80 hover:text-white transition-smooth font-medium text-sm md:text-base">
+								Contact
+							</a>
+						</div>
 					</div>
 				</nav>
 			</header>
-			<main>
+			<!-- Main Content -->
+			<main class="pb-20 md:pb-0">
 				{ children... }
 			</main>
+			<!-- Footer -->
+			<footer class="bg-[#0b1929] border-t border-white/10 py-12 mt-16">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="grid md:grid-cols-3 gap-8">
+						<!-- Company Info -->
+						<div>
+							<h3 class="text-xl font-bold gradient-text mb-4">PWT</h3>
+							<p class="text-white/60 mb-4">
+								Professional commercial kitchen hood cleaning services. NFPA 96 certified.
+							</p>
+						</div>
+						<!-- Quick Links -->
+						<div>
+							<h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+							<ul class="space-y-2">
+								<li><a href="/services" class="text-white/60 hover:text-white transition-smooth">Services</a></li>
+								<li><a href="/gallery" class="text-white/60 hover:text-white transition-smooth">Gallery</a></li>
+								<li><a href="/contact" class="text-white/60 hover:text-white transition-smooth">Contact</a></li>
+							</ul>
+						</div>
+						<!-- Contact Info -->
+						<div>
+							<h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+							<ul class="space-y-2 text-white/60">
+								<li>
+									<a href="tel:7152144518" class="hover:text-white transition-smooth flex items-center gap-2">
+										<span>📞</span> 715-214-4518
+									</a>
+								</li>
+								<li>
+									<a href="mailto:jeffrogerspwt@yahoo.com" class="hover:text-white transition-smooth flex items-center gap-2">
+										<span>✉️</span> jeffrogerspwt@yahoo.com
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
+						<p>© 2026 PWT - Power Wash Technologies. All rights reserved.</p>
+					</div>
+				</div>
+			</footer>
+			<!-- Floating CTA with Modal -->
+			@components.FloatingCTA()
 		</body>
 	</html>
 }

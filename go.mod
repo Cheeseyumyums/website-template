@@ -3,6 +3,7 @@ module website-template
 go 1.25
 
 require (
+	github.com/Oudwins/tailwind-merge-go v0.2.1
 	github.com/a-h/templ v0.3.960
 	github.com/labstack/echo/v4 v4.14.0
 	github.com/lmittmann/tint v1.1.2
